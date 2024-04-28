@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using hukukProjesi.Models
+@model Contacts
+
+@using (Html.BeginForm("Index", "Contact", FormMethod.Post))
+{
+    <div class="inner-banner has-base-color-overlay text-center" style="background: url(/Content/Site/images/background/1.jpg);">
+        <div class="container">
+            <div class="box">
+                <h3>İletişim</h3>
+            </div><!-- /.box -->
+        </div><!-- /.container -->
+    </div>
+
+    <div class="breadcumb-wrapper">
+        <div class="container">
+            <div class="pull-left">
+                <ul class="list-inline link-list">
+                    <li>
+                        <a href="@Url.Action("Index","Home")">Anasayfa</a>
+                    </li>
+                    <li>
+                        İletişim
+                    </li>
+                </ul><!-- /.list-line -->
+            </div><!-- /.pull-left -->
+        </div><!-- /.container -->
+    </div>
+
+    <section class="contact_us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="sec-title">
+                        <h2>İletişim</h2>
+                    </div>
+                    <div class="default-form-area">
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.ContactNameSurname, new { @class = "form-control", placeholder = "Ad *" })
+                                    @Html.ValidationMessageFor(model => model.ContactNameSurname, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.ContactPhone, new { @class = "form-control", placeholder = "Telefon" })
+                                    @Html.ValidationMessageFor(model => model.ContactPhone, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.ContactMail, new { @class = "form-control", placeholder = "E-Posta Adresi *" })
+                                    @Html.ValidationMessageFor(model => model.ContactMail, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.ContactSubject, new { @class = "form-control", placeholder = "Konu" })
+                                    @Html.ValidationMessageFor(model => model.ContactSubject, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    @Html.TextAreaFor(model => model.ContactMessage, new { @class = "form-control textarea", placeholder = "Mesaj yaz..." })
+                                    @Html.ValidationMessageFor(model => model.ContactMessage, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                    <input type="hidden" name="ContactDate" value="@DateTime.Now" />
+                                    <input type="hidden" name="ContactStatus" value="true" />
+                                    <button class="btn-style-one" type="submit" data-loading-text="Lütfen Bekle...">Gönder</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-12">
+                    <div class="sec-title">
+                        <h2>İletişime Geçin</h2>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifend, mel amet a laorit menandri.</p>
+                    </div>
+                    <br>
+                    <div class="default-cinfo">
+                        <div class="acc-content collapsed">
+                            <ul class="contact-infos">
+                                <li>
+                                    <div class="icon_box">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div><!-- /.icon-box -->
+                                    <div class="text-box">
+                                        <p><b>Adres:</b> <br> İstanbul, Beşiktaş, Barbaros Bulvarı, No: 123, 34353 Türkiye</p>
+                                    </div><!-- /.text-box -->
+                                </li>
+                                <li>
+                                    <div class="icon_box">
+                                        <i class="fa fa-phone"></i>
+                                    </div><!-- /.icon-box -->
+                                    <div class="text-box">
+                                        <p><b>Bizi Arayın:</b> <br> +90 850 001 002</p>
+                                    </div><!-- /.text-box -->
+                                </li>
+                                <li>
+                                    <div class="icon_box">
+                                        <i class="fa fa-envelope"></i>
+                                    </div><!-- /.icon-box -->
+                                    <div class="text-box">
+                                        <p><b>E-Posta Adresimiz:</b> <br>oncuhukuk@gmail.com</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<div class="map-section">
+    <div class="map-outer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.1138224491897!2d29.00511001140336!3d41.04463991706584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7a3aee621d5%3A0xbabfca17579086e4!2zU2luYW5wYcWfYSwgQmFyYmFyb3MgQmx2LiBObzoxMi8zLCAzNDM1MyBCZcWfaWt0YcWfL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1713480776973!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>

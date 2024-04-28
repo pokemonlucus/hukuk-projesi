@@ -1,0 +1,145 @@
+﻿@using hukukProjesi.Models
+@model List<Author>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .img-holder {
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.55);
+    }
+
+        .img-holder:hover {
+            box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+        }
+
+    a:hover img {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    /* Popup stilleri */
+    .author-details-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.5);
+    }
+
+    .author-details-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Popup'ın z-index değerini yüksek bir değer olarak ayarlayın */
+    }
+</style>
+
+<div class="inner-banner has-base-color-overlay text-center" style="background: url(/Content/Site/images/background/1.jpg);">
+    <div class="container">
+        <div class="box">
+            <h3>Hakkımızda</h3>
+        </div>
+    </div>
+</div>
+
+<div class="breadcumb-wrapper">
+    <div class="container">
+        <div class="pull-left">
+            <ul class="list-inline link-list">
+                <li>
+                    <a href="#">Anasayfa</a>
+                </li>
+                <li>
+                    <a href="#">Hakkımızda</a>
+                </li>
+                <li>
+                    Avukatlarımız
+                </li>
+            </ul>
+        </div>
+        <div class="pull-right">
+            <a href="#" class="get-qoute"><i class="fa fa-share"></i>share</a>
+        </div>
+    </div>
+</div>
+
+<section class="who-we-are-area padd-2">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.OrderBy(x => x.AddedDate))
+            {
+                if (item.Role == "Admin")
+                {
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="founder clearfix">
+                            <div class="img-holder">
+                                <a href="#" class="detail-link" data-id="@item.Id">
+                                    <img src="@item.image" alt="Awesome Image" style="width:80px; height:80px; position:center;">
+                                </a>
+                            </div>
+                            <div class="name">
+                                <h3>@item.NameSurname</h3>
+                                <p>
+                                    <b>Uzmanlık Alanı:</b> @item.About <br />
+                                    <b>Deneyim:</b> @item.Deneyim <br />
+                                    <b>Eğitim:</b> @item.Egitim <br />
+                                    <b>Açıklama:</b> @item.Aciklama
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+
+<!-- Popup içeriği -->
+<div id="authorDetailsPopup" class="author-details-popup" style="display: none;">
+    <div class="popup-content">
+        <div id="authorDetailsContainer"></div>
+        <button id="closePopupBtn" class="btn btn-danger">Kapat</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.detail-link').click(function (e) {
+            e.preventDefault();
+            var id = $(this).data('id');
+            var url = '@Url.Action("Details", "AuthorAdmin")/' + id;
+
+            $.get(url, function (data) {
+                $('#authorDetailsContainer').html(data);
+                $('#authorDetailsPopup').fadeIn();
+            });
+        });
+
+        $('#closePopupBtn').click(function () {
+            $('#authorDetailsPopup').fadeOut();
+        });
+    });
+</script>

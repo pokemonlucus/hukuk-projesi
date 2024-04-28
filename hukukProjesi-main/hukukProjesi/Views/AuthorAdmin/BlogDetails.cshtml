@@ -1,0 +1,34 @@
+﻿@model hukukProjesi.Models.Blog
+@{
+    var nameSurname = Context.Session["NameSurname"] as string;
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Avukat Hakkında</h4>
+</div>
+<div class="modal-body">
+    <table class="table table-bordered">
+        <tr>
+            <td>Başlık</td>
+            <td>@Model.Baslik</td>
+        </tr>
+        <tr>
+            <td>Konu</td>
+            <td >
+                @Html.Raw(string.Join("<br/>", Model.Konu.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None)))
+            </td>
+        </tr>
+        <tr>
+            <td>Özet</td>
+            <td>@Model.Ozet</td>
+        </tr>
+        <tr>
+            <td>Ekleyen Kişi</td>
+            <td>@nameSurname</td>
+        </tr>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>

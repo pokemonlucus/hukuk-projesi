@@ -1,0 +1,41 @@
+﻿@model IEnumerable<hukukProjesi.Models.Blog>
+@{
+    ViewBag.Title = "Blogs";
+}
+
+<section class="news-section padd-1 bg-1">
+    <div class="container">
+        <!--Sec Title-->
+        <div class="sec-title center">
+            <h2>Son <span>Bloglar</span></h2>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.OrderByDescending(x => x.EklenmeTarihi).Take(3))
+            {
+                <div class="col-md-4 col-sm-6">
+                    <!--News Style One-->
+                    <div class="news-style-one">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="@item.image" style="width:500px; height:250px;" />
+                                <div class="post-time">22 Jan, 2018</div>
+                            </div>
+                            <div class="lower-content">
+                                <h3><a href="blog-details.html">@item.Baslik</a></h3>
+                                <div class="text">
+                                    @{
+                                        var ozet = item.Ozet.Length > 120 ? item.Ozet.Substring(0, 120) + "..." : item.Baslik;
+                                    }
+                                    @ozet
+                                </div>
+                                <div class="link-btn2 center">
+                                    <a href="@Url.Action("Detail", "Blog", new { BlogId = item.BlogId })" class="btn-style-two">Daha Fazla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

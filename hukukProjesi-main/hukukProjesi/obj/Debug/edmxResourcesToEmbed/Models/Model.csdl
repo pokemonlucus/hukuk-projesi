@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hukukDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="hukukDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Author" EntityType="hukukDBModel.Author" />
+    <EntitySet Name="Blog" EntityType="hukukDBModel.Blog" />
+    <EntitySet Name="Contacts" EntityType="hukukDBModel.Contacts" />
+  </EntityContainer>
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="About" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Deneyim" Type="Int32" />
+    <Property Name="Egitim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ozet" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Konu" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="EklenmeTarihi" Type="DateTime" Precision="3" />
+    <Property Name="DüzenlenmeTarihi" Type="DateTime" Precision="3" />
+    <Property Name="image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EkleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ContactMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContactDate" Type="DateTime" Precision="3" />
+    <Property Name="ContactStatus" Type="Boolean" />
+  </EntityType>
+</Schema>

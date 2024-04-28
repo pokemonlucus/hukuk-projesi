@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Giriş Yap | Öncü Hukuk</title>
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/Site/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/Site/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/~/Content/Site/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="~/Content/Site/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="~/Content/Site/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="~/Content/Admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="~/Content/Admin/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="~/Content/Admin/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="~/Content/Admin/css/style.css" rel="stylesheet">
+    <style>
+        .login-page {
+            background-color: #f8f4f4;
+        }
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            max-width: 400px;
+            border-radius: 200px;
+        }
+
+        .alert {
+            background-color: #f2dede;
+            color: #ff1c4c;
+        }
+
+        .btn {
+            background-color: #e91e63;
+            border-color: #e91e63;
+            color: #fff;
+        }
+
+        .form-control {
+            border-color: #e91e63;
+        }
+
+        .custom-btn {
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 5px;
+            padding: 6px 12px;
+            border-radius: 3px;
+            text-decoration: none;
+            color: #ff1c4c;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .custom-btn:hover {
+                background-color: #e91e63;
+                border-color: #e91e63;
+                color: #fff; /* Yazı rengi değişiyor */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+            }
+
+                .custom-btn:hover span {
+                    color: #fff; /* Hover durumunda içerideki yazı rengi değişiyor */
+                }
+    </style>
+</head>
+
+<body class="login-page">
+    <div>
+        <div>
+            <a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/Site/images/logo/oncu.png")" alt="" style="height:100px; padding-left:70px; margin-top:50px; "></a>
+        </div>
+    </div>
+    <div class="login-box" style="margin-top: 50px;">
+        <div class="card" style="border-radius: 10px; -webkit-box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.75); box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.75); ">
+            <div class="body">
+                <h1 style="color: #e91e63">GİRİŞ YAP</h1>
+                <div class="alert">@Html.ValidationSummary(true, "", new { @class = "text-danger" })</div>
+                <form action="@Url.Action("Index", "Login")" method="post">
+
+                    <!--EPOSTA-->
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="material-icons col-pink">person</i></span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="email" placeholder="E-posta" required autofocus>
+                        </div>
+                    </div>
+                    @Html.ValidationMessage("email", "", new { @class = "text-danger" })
+                    <!--EPOSTA-->
+                    <!--ŞİFRE-->
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="material-icons col-pink">lock</i></span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="password" placeholder="Şifre" required>
+                        </div>
+                    </div>
+                    @Html.ValidationMessage("password", "", new { @class = "text-danger" })
+                    <!--ŞİFRE-->
+                    <button class="btn btn-block waves-effect" type="submit">Giriş Yap</button>
+                </form>
+                <div class="row m-t-15 m-b--20">
+                    <!--KAYIT-->
+                    <div class="col-xs-6 align-left">
+                        <a href="@Url.Action("Register","Login")" class="custom-btn" style="color:#ff1c4c;"><span>Kayıt Ol</span></a>
+                    </div>
+                    <!--KAYIT-->
+                    <!--ADMİN GİRİŞ-->
+                    <div class="col-xs-6 align-right">
+                        <a href="@Url.Action("Login","AuthorAdmin")" class="custom-btn" style="color:#ff1c4c;"><span>Admin Giriş</span></a>
+                    </div>
+                    <!--ADMİN GİRİŞ-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="~/Content/Admin/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core Js -->
+    <script src="~/Content/Admin/plugins/bootstrap/js/bootstrap.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="~/Content/Admin/plugins/node-waves/waves.js"></script>
+    <!-- Validation Plugin Js -->
+    <script src="~/Content/Admin/plugins/jquery-validation/jquery.validate.js"></script>
+    <!-- Custom Js -->
+    <script src="~/Content/Admin/js/admin.js"></script>
+    <script src="~/Content/Admin/js/pages/examples/sign-in.js"></script>
+</body>
+
+</html>

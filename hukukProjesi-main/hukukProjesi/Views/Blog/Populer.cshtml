@@ -1,0 +1,33 @@
+﻿@using hukukProjesi.Models
+@model List<Blog>
+@{
+    var nameSurname = Context.Session["nameSurname"] as string;
+    var BlogId = Context.Session["BlogId"] as string;
+}
+
+<div class="popular_news sidebar-padd mar-1">
+    <div class="inner-title">
+        <h3>Son Eklenen Bloglar</h3>
+    </div>
+
+    <div class="popular-post">
+        @{
+            var reversedModel = new List<Blog>(Model);
+            reversedModel.Reverse();
+        }
+        @foreach (var item in reversedModel.OrderByDescending(x => x.EklenmeTarihi).Take(3))
+        {
+            <div class="item">
+                <div class="post-thumb"><a href="@Url.Action("Detail", "Blog", new { BlogId = item.BlogId })"><img src="@item.image" alt=""></a></div>
+                <h4>
+                    <a href="@Url.Action("Detail", "Blog", new { BlogId = item.BlogId })">
+                        @{
+                            var baslik = item.Baslik.Length > 120 ? item.Baslik.Substring(0, 120) + "..." : item.Baslik;
+                        }
+                        @baslik
+                    </a>
+                </h4>
+            </div>
+        }
+    </div>
+</div>

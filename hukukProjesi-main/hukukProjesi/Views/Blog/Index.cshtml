@@ -1,0 +1,196 @@
+﻿@using hukukProjesi.Models
+@model List<Blog>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var nameSurname = Context.Session["nameSurname"] as string;
+    var BlogId = Context.Session["BlogId"] as string;
+    var userRole = Context.Session["UserRole"] as string;
+
+    // Sayfa numarasını alalım, varsayılan olarak 1
+    int page = !string.IsNullOrEmpty(Request.QueryString["page"]) ? int.Parse(Request.QueryString["page"]) : 1;
+
+    // Sayfada gösterilecek blog sayısı
+    int pageSize = 4;
+
+    // Sayfalama için gerekli değişkenler
+    int totalCount = Model.Count;
+    int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+    // Verileri en son eklenenlerin en üstte olacak şekilde sırala
+    var sortedBlogs = Model.OrderByDescending(x => x.EklenmeTarihi).ToList();
+
+    // Sayfalama için gerekli değişkenler
+    var paginatedBlogs = sortedBlogs.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+}
+<style>
+    /* Form wrapper styling */
+    .search-wrapper {
+        position: relative;
+        margin-top: 20px;
+        float: right;
+    }
+
+        /* Form text input */
+        .search-wrapper input {
+            width: 220px;
+            height: 40px;
+            padding: 10px 15px;
+            font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+            border: 0;
+            background: #EEE;
+            border-radius: 3px 0 0 3px;
+        }
+
+            .search-wrapper input:focus {
+                outline: 0;
+                background: #fff;
+                box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+            }
+
+            .search-wrapper input::placeholder {
+                color: #999;
+                font-weight: normal;
+                font-style: italic;
+            }
+
+        /* Form submit button */
+        .search-wrapper button {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            height: 40px;
+            width: 72px;
+            font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+            color: white;
+            text-transform: uppercase;
+            background: #D83C3C;
+            border-radius: 0 3px 3px 0;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+        }
+
+            .search-wrapper button:hover {
+                background: #e54040;
+            }
+
+            .search-wrapper button:active,
+            .search-wrapper button:focus {
+                background: #c42f2f;
+                outline: 0;
+            }
+
+            .search-wrapper button:before { /* left arrow */
+                content: '';
+                position: absolute;
+                border-width: 8px 8px 8px 0;
+                border-style: solid solid solid none;
+                border-color: transparent #d83c3c transparent;
+                top: 12px;  column-count vbnbnn
+                left: -6px;
+            }
+
+            .search-wrapper button:hover:before {
+                border-right-color: #e54040;
+            }
+
+            .search-wrapper button:focus:before,
+            .search-wrapper button:active:before {
+                border-right-color: #c42f2f;
+            }
+
+            .search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+                border: 0;
+                padding: 0;
+            }
+</style>
+<div class="inner-banner has-base-color-overlay text-center" style="background: url(/Content/Site/images/background/1.jpg);">
+    <div class="container">
+        <div class="box">
+            <h3>Blog</h3>
+        </div>
+    </div>
+</div>
+
+<div class="breadcumb-wrapper">
+    <div class="container">
+        <div class="pull-left">
+            <ul class="list-inline link-list">
+                <li>
+                    <a href="@Url.Action("","")">Anasayfa</a>
+                </li>
+                <li>
+                    Blog
+                </li>
+            </ul>
+        </div>
+        <div class="pull-right">
+            <a href="#" class="get-qoute"><i class="fa fa-share"></i>share</a>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-page-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <section class="news-section padd-2">
+                    <div class="row">
+                        @foreach (var item in paginatedBlogs)
+                        {
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="news-style-one">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img src="@item.image" alt="" style="width:400px; height:250px;">
+                                        </div>
+                                        <div class="lower-content">
+                                            <h3><a href="blog-details.html">@item.Baslik</a></h3>
+                                            <div class="text">
+                                                @{
+                                                    var ozet = item.Ozet.Length > 120 ? item.Ozet.Substring(0, 120) + "..." : item.Ozet;
+                                                }
+                                                @ozet
+                                            </div>
+                                            <div class="link-btn2 center">
+                                                <a href="@Url.Action("Detail", "Blog", new { BlogId = item.BlogId })" class="btn-style-two" style="float:unset;">Daha Fazla</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                <!-- Sayfalama kontrolleri -->
+                @if (totalPages > 1)
+                {
+                    <div class="text-center">
+                        <ul class="pagination">
+                            @for (int i = 1; i <= totalPages; i++)
+                            {
+                                <li class="@(i == page ? "active" : "")"><a href="?page=@i">@i</a></li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+
+            <div class="search-wrapper">
+                <form method="get" action="@Url.Action("Search", "Blog")" class="search-wrapper cf">
+                    <input type="text" name="searchString" placeholder="Blog ara..." required="">
+                    <button type="submit"> -Ara</button>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="blog-sidebar padd-4">
+                    @Html.Action("Populer", "Blog")
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

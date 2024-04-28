@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model List<hukukProjesi.Models.Blog>
+}
+
+<div class="container mt-4 pt-4 pb-4">
+    <style>
+        .blog-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+            .blog-item img {
+                max-width: 100%;
+                height: auto;
+            }
+
+        .blog-title a {
+            color: #d9534f; /* Kırmızı renk */
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s; /* Renk değişimini 0.3 saniyede yap */
+        }
+
+            .blog-title a:hover {
+                color: #ff5050; /* Açık kırmızı renk */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölge */
+            }
+
+        .blog-summary {
+            color: #666;
+        }
+
+        .btn-primary {
+            background-color: #d9534f; /* Kırmızı renk */
+            border-color: #d9534f; /* Kırmızı renk */
+        }
+
+            .btn-primary:hover {
+                background-color: #ff5050; /* Açık kırmızı renk */
+                border-color: #ff5050; /* Açık kırmızı renk */
+            }
+    </style>
+    @if (Model.Any())
+    {
+        <h2>Arama Sonuçları:</h2>
+        <div class="row">
+            @foreach (var blog in Model)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="blog-item">
+                        <img src="@blog.image" alt="@blog.Baslik" class="img-fluid mb-2">
+                        <h3 class="blog-title"><a href="@Url.Action("Detail", "Blog", new { BlogId = blog.BlogId })">@blog.Baslik</a></h3>
+                        <p class="blog-summary">
+                            @{
+                                var ozet = blog.Ozet.Length > 120 ? blog.Ozet.Substring(0, 120) + "..." : blog.Ozet;
+                            }
+                            @ozet
+                        </p>
+                        <a href="@Url.Action("Detail", "Blog", new { BlogId = blog.BlogId })" class="btn btn-primary">Daha Fazla</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Aranan metne uygun kayıt bulunamadı.</p>
+    }
+</div>

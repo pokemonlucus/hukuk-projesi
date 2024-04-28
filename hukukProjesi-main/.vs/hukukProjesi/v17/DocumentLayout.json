@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\home\\slider.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\home\\slider.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\home\\counter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\home\\counter.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\authoradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\authoradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\authoradmin\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\authoradmin\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\about\\avukat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\about\\avukat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\login\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\login\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\blog\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\blog\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\home\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\home\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|c:\\users\\hp\\desktop\\hukukprojesi-main\\hukukprojesi\\views\\home\\proje.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{968C9F0A-ED73-4CF5-9399-6317AA2C9C4E}|hukukProjesi\\hukukProjesi.csproj|solutionrelative:hukukprojesi\\views\\home\\proje.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Home\\About.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:54:23.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Counter.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\Counter.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Home\\Counter.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\Counter.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Home\\Counter.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:49:18.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "hukukProjesi\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "hukukProjesi\\Controllers\\ServiceController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T18:42:03.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "hukukProjesi\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "hukukProjesi\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T18:41:57.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\AuthorAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\AuthorAdmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\AuthorAdmin\\Index.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\AuthorAdmin\\Index.cshtml",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAAAGsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:32:18.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Blog.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\AuthorAdmin\\Blog.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\AuthorAdmin\\Blog.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\AuthorAdmin\\Blog.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\AuthorAdmin\\Blog.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:32:15.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Avukat.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\About\\Avukat.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\About\\Avukat.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\About\\Avukat.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\About\\Avukat.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:31:52.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Login\\Register.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Login\\Register.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Login\\Register.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Login\\Register.cshtml",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAcwMIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:29:09.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Slider.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\Slider.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Home\\Slider.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\Slider.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Home\\Slider.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T16:07:47.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAcwJYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:27:27.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Service\\Index.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Service\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Service\\Index.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Service\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:12:36.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Blog\\Index.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Blog\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Blog\\Index.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Blog\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:06:18.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Blog\\Detail.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Blog\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Blog\\Detail.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Blog\\Detail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T18:06:16.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Proje.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\Proje.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Home\\Proje.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\Proje.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Home\\Proje.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T15:59:20.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "info.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\info.cshtml",
+              "RelativeDocumentMoniker": "hukukProjesi\\Views\\Home\\info.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\hukukProjesi-main\\hukukProjesi\\Views\\Home\\info.cshtml",
+              "RelativeToolTip": "hukukProjesi\\Views\\Home\\info.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T15:54:03.664Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

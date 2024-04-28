@@ -1,0 +1,109 @@
+﻿@{
+    var nameSurname = Context.Session["NameSurname"] as string;
+    var userId = Context.Session["UserId"] as int?;
+    var Email = Context.Session["userEmail"] as string;
+    var Image = Context.Session["userImage"];
+}
+<aside id="leftsidebar" class="sidebar">
+    <!-- User Info -->
+    <div class="user-info">
+        <div class="image">
+            <img src="@Image" width="48" height="48" alt="User" />
+        </div>
+        <div class="info-container">
+            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@nameSurname</div>
+            <div class="email">@Email</div>
+            <div class="btn-group user-helper-dropdown">
+            </div>
+        </div>
+    </div>
+    <!-- #User Info -->
+    <!-- Menu -->
+    <div class="menu">
+        <ul class="list">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active">
+                <a href="@Url.Action("Index","Home")" target="_blank">
+                    <i class="material-icons">home</i>
+                    <span>Anasayfa</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index","About")" target="_blank">
+                    <i class="material-icons">group</i>
+                    <span>Hakkımızda</span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","Contact")" target="_blank">
+                    <i class="material-icons">
+                        assignment_ind
+                    </i>
+                    <span>İletişim</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="@Url.Action("Index","AuthorAdmin")">
+                    <i class="material-icons">view_list</i>
+                    <span>Avukatlar</span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Create","AuthorAdmin")">
+                    <i class="material-icons">edit</i>
+                    <span>Avukat Ekle</span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Blog","AuthorAdmin")">
+                    <i class="material-icons">
+                        article
+                    </i>
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("BlogEkle","AuthorAdmin")">
+                    <i class="material-icons">article</i>
+                    <span>Blog Ekle</span>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Contact","AuthorAdmin")">
+                    <i class="material-icons">article</i>
+                    <span>Gelen Mesajlar</span>
+                </a>
+            </li>
+
+            <li class="header">LABELS</li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="material-icons col-red">donut_large</i>
+                    <span>Important</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="material-icons col-amber">donut_large</i>
+                    <span>Warning</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="material-icons col-light-blue">donut_large</i>
+                    <span>Information</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- #Menu -->
+    <!-- Footer -->
+    <div class="legal">
+        <div class="copyright">
+            &copy; 2024 <a href="javascript:void(0);">Admin Panel - Öncü Hukuk</a>.
+        </div>
+    </div>
+    <!-- #Footer -->
+</aside>

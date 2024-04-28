@@ -1,0 +1,194 @@
+﻿@model hukukProjesi.Models.Author
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+        font-size: 100%;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: hsl(210, 38%, 95%);
+    }
+
+    .form {
+        background: #fff;
+        padding: 30px 34px;
+        margin: 24px 0 0;
+        min-width: 400px;
+        min-height: 273px;
+        border-radius: 5px;
+        line-height: 24px;
+        box-shadow: 3px 1px 8px rgba(255,255,255,.5),3px 2px 8px rgba(0,0,0,.1)
+    }
+
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .error {
+        border: 1px solid red;
+    }
+
+    input[type="email"], input[type="password"], input[type="name"] {
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        background: hsl(210, 38%, 95%);
+        line-height: 24px;
+        outline: none;
+    }
+
+        input[type="email"]:focus, input[type="password"]:focus input[type="name"]:focus {
+            border-bottom: 1px solid orange;
+            /*   border-radius:5px; */
+        }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .action {
+        align-items: center;
+        border-color: hsl(214, 32%, 91%);
+        color: hsl(220, 26%, 14%);
+        display: flex;
+        gap: normal;
+        justify-content: flex-end;
+        line-height: 24px;
+        margin: 16px 0px 0px;
+    }
+
+        .action a {
+            border-color: hsl(214, 32%, 91%);
+            color: hsl(220, 26%, 14%);
+            font-family: Nunito;
+            font-size: 14px;
+            gap: normal;
+            line-height: 21px;
+            text-transform: capitalize;
+        }
+
+    .btn {
+        padding: 10px 20px;
+        align-items: flex-start;
+        background-color: hsl(218, 17%, 35%);
+        border-color: hsla(0, 0%, 0%, 0);
+        border-color: hsla(0, 0%, 0%, 0);
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: hsla(0, 0%, 0%, 0.1) 0px 4px 6px -1px, color: hsl(0, 0%, 100%);
+        font-size: 14px;
+        font-weight: 600;
+        gap: normal;
+        letter-spacing: 1.4px;
+        line-height: 21px;
+        margin: 0px 0px 0px 16px;
+        padding: 8px 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: hsl(0, 0%, 100%);
+        font-family: Nunito;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+
+        .btn:hover {
+            background: hsl(218, 17%, 24%);
+        }
+
+    a {
+        text-decoration: none;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .action {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+</style>
+
+<div class="container" style="-webkit-box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.75); box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.30);">
+    @using (Html.BeginForm("Register", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="form">
+            <div class="grid-container">
+                <!--AD SOYAD-->
+                <div class="input-field">
+                    <label for="email">Ad Soyad<span style="color:red;">*</span></label>
+                    @Html.TextBoxFor(model => model.NameSurname, new { @class = "form-control", placeholder = "Ad Soyad", type = "name", id = "email", maxlength = "50", required = "required" })
+                </div>
+                <!--AD SOYAD-->
+                <!--E POSTA-->
+                <div class="input-field">
+                    <label for="email">E-Posta<span style="color:red;">*</span></label>
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "ornek@gmail.com", type = "email", id = "email", maxlength = "50", required = "required" })
+                </div>
+                <!--E POSTA-->
+                <!--PAROLA-->
+                <div class="input-field">
+                    <label for="email">Parola <span style="color:red;">*</span></label>
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = "********", type = "password", id = "email", maxlength = "50", required = "required" })
+                </div>
+                <!--PAROLA-->
+                <!--ALAN-->
+                <div class="input-field">
+                    <label for="email">Alan</label>
+                    @Html.TextBoxFor(model => model.About, new { @class = "form-control", placeholder = "Alan (Avukatlar için)", type = "name", id = "email", maxlength = "50", })
+                </div>
+                <!--ALAN-->
+                <!--EĞİTİM-->
+                <div class="input-field">
+                    <label for="email">Eğitim</label>
+                    @Html.TextBoxFor(model => model.Egitim, new { @class = "form-control", placeholder = "Eğitim", type = "name", id = "email", maxlength = "50", })
+                </div>
+                <!--EĞİTİM-->
+                <!--DENEYİM-->
+                <div class="input-field">
+                    <label for="email">Deneyim Süresi</label>
+                    @Html.TextBoxFor(model => model.Deneyim, new { @class = "form-control", placeholder = "Deneyim süresi", type = "name", id = "email", maxlength = "50", })
+                </div>
+                <!--DENEYİM-->
+                <!--BİYOGRAFİ-->
+                <div class="input-field" style="grid-column: 1 / span 2;">
+                    <label for="email">Biyografi</label>
+                    @Html.TextBoxFor(model => model.Aciklama, new { @class = "form-control", placeholder = "Biyografi", type = "name", id = "email", maxlength = "50", })
+                </div>
+                <!--BİYOGRAFİ-->
+                <div class="action" style="grid-column: 1 / span 2;">
+                    <!--HESABIM VAR-->
+                    <a href="@Url.Action("Index","Login")">Zaten bir hesabım var</a>
+                    <!--HESABIM VAR-->
+                    <!--GİRİŞ-->
+                    <button id="btn" class="btn">Giriş Yap</button>
+                    <!--GİRİŞ-->
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

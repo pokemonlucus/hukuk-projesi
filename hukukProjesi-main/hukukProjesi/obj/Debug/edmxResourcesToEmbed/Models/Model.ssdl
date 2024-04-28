@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hukukDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="About" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="AddedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="ModifyBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="image" Type="nvarchar" MaxLength="100" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+    <Property Name="Deneyim" Type="int" />
+    <Property Name="Egitim" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ozet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Konu" Type="nvarchar" MaxLength="2000" />
+    <Property Name="EklenmeTarihi" Type="datetime" />
+    <Property Name="DüzenlenmeTarihi" Type="datetime" />
+    <Property Name="image" Type="nvarchar" MaxLength="200" />
+    <Property Name="EkleyenKisi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactNameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactSubject" Type="nvarchar" MaxLength="250" />
+    <Property Name="ContactMessage" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContactDate" Type="datetime" />
+    <Property Name="ContactStatus" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="hukukDBModelStoreContainer">
+    <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
